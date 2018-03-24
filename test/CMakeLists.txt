@@ -1,3 +1,3 @@
-message("jiji")
+# Pseudo Test
+add_test(NAME AlwaysTrue COMMAND ${CMAKE_COMMAND} --version)
 
-add_test(NAME AlwaysTrue COMMAND "ls")
