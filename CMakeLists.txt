@@ -5,13 +5,13 @@
 #--------------------
 cmake_minimum_required(VERSION 3.9)
 
-project("bosswestfalen::to_string" VERSION 0.1.0 LANGUAGES CXX)
+project("bosswestfalen::string_builder" VERSION 0.1.0 LANGUAGES CXX)
 
 set(CXX_STANDARD 17)
 set(CXX_STANDARD_REQUIRED ON)
 set(CXX_EXTENSIONS OFF)
 
-set(TARGET_NAME "to_string")
+set(TARGET_NAME "string_builder")
 
 add_library(${TARGET_NAME} INTERFACE)
 

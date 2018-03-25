@@ -1,8 +1,8 @@
-#ifndef BOSSWESTFALEN_TO_STRING_HPP
-#define BOSSWESTFALEN_TO_STRING_HPP
+#ifndef BOSSWESTFALEN_STRING_BUILDER_HPP
+#define BOSSWESTFALEN_STRING_BUILDER_HPP
 
 /*!
- * \file to_string.hpp
+ * \file 
  * \author Bosswestfalen (https://github.com/Bosswestfalen)
  * \version @PROJECT_VERSION@
  * \date 2018
