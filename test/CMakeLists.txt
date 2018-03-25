@@ -1,12 +1,20 @@
+# ToDo: Make test depent on build?
+
+#--------------------
 # Global set-up
+#--------------------
 
 
+#--------------------
 # Pseudo Test
+#--------------------
 add_test(NAME AlwaysTrue COMMAND ${CMAKE_COMMAND} --version)
 
+#--------------------
 # Unit Tests
-set(UNIT_DIR "src/unit")
-set(TP_DIR "third_party")
+#--------------------
+set(UNIT_DIR "${CMAKE_SOURCE_DIR}/test/src/unit")
+set(TP_DIR "${CMAKE_SOURCE_DIR}/test/third_party")
 add_library(catch_main OBJECT "${UNIT_DIR}/main.cpp")
 target_include_directories(catch_main PRIVATE "${TP_DIR}/catch")
 
