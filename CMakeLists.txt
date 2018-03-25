@@ -20,9 +20,11 @@ add_library(${TARGET_NAME} INTERFACE)
 #--------------------
 find_package(Doxygen)
 if(DOXYGEN_FOUND)
+    set(DOXYGEN_FULL_PATH_NAMES "YES")
     set(DOXYGEN_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/doc")
-    set(DOXYGEN_STRIP_FROM_PATH "src")
-    doxygen_add_docs(doc "${CMAKE_SOURCE_DIR}/src")
+    set(DOXYGEN_STRIP_FROM_PATH "${CMAKE_BINARY_DIR}")
+    configure_file("${CMAKE_SOURCE_DIR}/src/${TARGET_NAME}.hpp" "${CMAKE_BINARY_DIR}/${TARGET_NAME}.hpp")
+    doxygen_add_docs(doc "${CMAKE_BINARY_DIR}/${TARGET_NAME}.hpp")
 endif()
 
 #--------------------
