@@ -3,7 +3,7 @@
 
 /*!
  * \file to_string.hpp
- * \author bosswestfalen (https://github.com/Bosswestfalen)
+ * \author Bosswestfalen (https://github.com/Bosswestfalen)
  * \version @PROJECT_VERSION@
  * \date 2018
  * \copyright MIT
