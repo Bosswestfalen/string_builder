@@ -7,16 +7,11 @@
  * \version @PROJECT_VERSION@
  * \date 2018
  * \copyright MIT
- *
- * \brief MISSING
- *
- * MISSING
- *
- * \todo Add documentation
  */
 
 /*!
- * \todo Add documentation
+ * \brief Bosswestfalen's namespace
+ * @see https://github.com/Bosswestfalen
  */
 namespace bosswestfalen
 {
