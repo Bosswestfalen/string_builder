@@ -25,6 +25,10 @@ if(DOXYGEN_FOUND)
     set(DOXYGEN_STRIP_FROM_PATH "${CMAKE_BINARY_DIR}")
     configure_file("${CMAKE_SOURCE_DIR}/src/${TARGET_NAME}.hpp" "${CMAKE_BINARY_DIR}/${TARGET_NAME}.hpp")
     doxygen_add_docs(doc "${CMAKE_BINARY_DIR}/${TARGET_NAME}.hpp")
+    # Custom script to wipe the content of the doc folder (see cmake/wipe_doc.cmake for more details)
+    add_custom_target(wipe_docs COMMAND ${CMAKE_COMMAND} -P "${CMAKE_SOURCE_DIR}/cmake/wipe_doc.cmake")
+    # wipe doc/html before generating documentation
+    add_dependencies(doc wipe_docs)
 endif()
 
 #--------------------
