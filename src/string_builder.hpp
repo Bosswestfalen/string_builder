@@ -6,7 +6,7 @@
  * \author Bosswestfalen (https://github.com/Bosswestfalen)
  * \version @PROJECT_VERSION@
  * \date 2018
- * \copyright MIT
+ * \copyright @LICENSE@
  */
 
 /*!
