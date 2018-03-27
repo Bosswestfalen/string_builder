@@ -1,14 +1,19 @@
 #include <catch.hpp>
 #include <string_builder.hpp>
 
-TEST_CASE("building")
+SCENARIO("building strings")
 {
-    bosswestfalen::string_builder sb;
-
-    SECTION("empty string_builder")
+    GIVEN("an empty string_builder")
     {
-        const std::string empty{""};
-        REQUIRE(empty == sb.build());
+        bosswestfalen::string_builder sb;
+
+        WHEN("its result is requested")
+        {
+            THEN("it is an empty string")
+            {
+                REQUIRE(std::string{""} == sb.build());
+            }
+        }
     }
 }
 
