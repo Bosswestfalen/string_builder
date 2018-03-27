@@ -1,11 +1,13 @@
 #include <catch.hpp>
-
 #include <string_builder.hpp>
 
 
-TEST_CASE("Default Ctor", "[construction]")
+TEST_CASE("construction")
 {
-    bosswestfalen::string_builder sb;
-    REQUIRE(true);
+    SCENARIO("default ctor")
+    {
+        bosswestfalen::string_builder sb;
+        REQUIRE(true);
+    }
 }
 
