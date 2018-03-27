@@ -14,6 +14,17 @@ SCENARIO("building strings")
                 REQUIRE(std::string{""} == sb.build());
             }
         }
+
+        WHEN("a string is added")
+        {
+            const std::string cat{"cat"};
+            sb.add(cat);
+            
+            THEN("the result is the entered string")
+            {
+                REQUIRE(cat == sb.build());
+            }
+        }
     }
 }
 
