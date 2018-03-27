@@ -19,12 +19,12 @@ namespace bosswestfalen
 {
 
 /*!
- * \brief The string_builder allows to easily concatenate strings.
+ * \brief The `string_builder` allows to easily concatenate strings.
  *
  * Strings are collected and concatenated on demand.
- * Concatenating a, b, and c yields the string abc.
+ * Concatenating *a*, *b*, and *c* yields the string *abc*.
  *
- * \note string_builder is not thread-safe.
+ * \note `string_builder` is not thread-safe.
  * 
  * \todo Go into detail, when this class evolves.
  */
@@ -37,7 +37,19 @@ class string_builder final
     /// Nothing special to do on destruction.
     ~string_builder() = default;
 
-    //void add();
+    /*!
+     * \brief Add new content to the `string_builder`.
+     *
+     * *input* is stored internally and will be used in `build()`.
+     *
+     * \todo Other versions? (&&, copy)
+     *
+     * \param input The string that will be added to the `string_builder`'s internal storage.
+     */
+    void add(const std::string& input)
+    {
+        storage = input;
+    }
    
     /*!
      * \brief Concatenate stored strings.
@@ -52,10 +64,11 @@ class string_builder final
      */ 
     std::string build() const
     {
-        return std::string{""};
+        return storage;
     }
 
   private:
+    std::string storage{""};
 };
 
 }
