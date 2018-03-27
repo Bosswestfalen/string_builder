@@ -15,6 +15,26 @@
  */
 namespace bosswestfalen
 {
+
+/*!
+ * \brief The string_builder allows to easily concatenate strings.
+ *
+ * Strings are collected and concatenated on demand.
+ * 
+ * \todo Go into detail, when this class evolves.
+ */
+class string_builder final
+{
+  public:
+    /// Default Ctor is sufficient.
+    string_builder() = default;
+
+    /// Nothing special to do on destruction.
+    ~string_builder() = default;
+
+  private:
+};
+
 }
 
 #endif

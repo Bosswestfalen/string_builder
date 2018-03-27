@@ -1,14 +1,10 @@
 # ToDo: Make test depent on build?
+# ToDo: including binary dir is ugly, at least <bosswestfalen/string_builder.hpp"
 
 #--------------------
 # Global set-up
 #--------------------
-
-
-#--------------------
-# Pseudo Test
-#--------------------
-add_test(NAME AlwaysTrue COMMAND ${CMAKE_COMMAND} --version)
+include_directories(${CMAKE_BINARY_DIR})
 
 #--------------------
 # Unit Tests
@@ -23,9 +19,6 @@ foreach(file_path ${files})
     get_filename_component(test_name ${file_path} NAME_WE)
     add_executable(${test_name} $<TARGET_OBJECTS:catch_main> ${file_path})
     target_include_directories(${test_name} PRIVATE "${TP_DIR}/catch")
+    add_test(NAME "unit${test_name}" COMMAND ${test_name})
 endforeach()
-
-add_test(NAME "will_pass" COMMAND "test_pass")
-add_test(NAME "will_fail" COMMAND "test_fail")
-set_tests_properties("will_fail" PROPERTIES WILL_FAIL TRUE)
 
