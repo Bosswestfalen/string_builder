@@ -4,7 +4,7 @@
 
 TEST_CASE("construction")
 {
-    SCENARIO("default ctor")
+    SECTION("default ctor")
     {
         bosswestfalen::string_builder sb;
         REQUIRE(true);
