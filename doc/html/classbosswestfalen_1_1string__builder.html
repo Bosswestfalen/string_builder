@@ -86,12 +86,47 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbosswestfalen_1_1string__builder.html#ad6b200758f49814ac27337fc5fcf96e9">~string_builder</a> ()=default</td></tr>
 <tr class="memdesc:ad6b200758f49814ac27337fc5fcf96e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nothing special to do on destruction. <br /></td></tr>
 <tr class="separator:ad6b200758f49814ac27337fc5fcf96e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1080be417923538a429a42276c551186"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbosswestfalen_1_1string__builder.html#a1080be417923538a429a42276c551186">build</a> () const</td></tr>
+<tr class="memdesc:a1080be417923538a429a42276c551186"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concatenate stored strings.  <a href="#a1080be417923538a429a42276c551186">More...</a><br /></td></tr>
+<tr class="separator:a1080be417923538a429a42276c551186"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The <a class="el" href="classbosswestfalen_1_1string__builder.html" title="The string_builder allows to easily concatenate strings. ">string_builder</a> allows to easily concatenate strings. </p>
-<p>Strings are collected and concatenated on demand.</p>
+<p>Strings are collected and concatenated on demand. Concatenating a, b, and c yields the string abc.</p>
+<dl class="section note"><dt>Note</dt><dd><a class="el" href="classbosswestfalen_1_1string__builder.html" title="The string_builder allows to easily concatenate strings. ">string_builder</a> is not thread-safe.</dd></dl>
 <dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">Todo:</a></b></dt><dd>Go into detail, when this class evolves. </dd></dl>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a1080be417923538a429a42276c551186"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1080be417923538a429a42276c551186">&#9670;&nbsp;</a></span>build()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string bosswestfalen::string_builder::build </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Concatenate stored strings. </p>
+<p>All strings added so far will be concatenated without any delimiter. Stored strings <em>a</em>, <em>b</em>, and <em>c</em> will result in <em>abc</em>.</p>
+<dl class="section note"><dt>Note</dt><dd>The result is not stored. Additional calls to <code><a class="el" href="classbosswestfalen_1_1string__builder.html#a1080be417923538a429a42276c551186" title="Concatenate stored strings. ">build()</a></code> will result in re-building, even if nothing changed.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The concatenation of all stored strings. </dd></dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="string__builder_8hpp_source.html">string_builder.hpp</a></li>
 </ul>
 </div><!-- contents -->

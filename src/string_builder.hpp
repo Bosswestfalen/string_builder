@@ -38,7 +38,18 @@ class string_builder final
     ~string_builder() = default;
 
     //void add();
-    
+   
+    /*!
+     * \brief Concatenate stored strings.
+     *
+     * All strings added so far will be concatenated without any delimiter.
+     * Stored strings *a*, *b*, and *c* will result in *abc*.
+     * 
+     * \note The result is not stored.
+     * Additional calls to `build()` will result in re-building, even if nothing changed.
+     *
+     * \return The concatenation of all stored strings.
+     */ 
     std::string build() const
     {
         return std::string{""};
