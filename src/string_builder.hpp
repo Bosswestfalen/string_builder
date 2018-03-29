@@ -30,8 +30,6 @@ namespace bosswestfalen
  * Concatenating *a*, *b*, and *c* yields the string *abc*.
  *
  * \note `string_builder` is not thread-safe.
- * 
- * \todo Go into detail, when this class evolves.
  */
 class string_builder final
 {
@@ -66,6 +64,8 @@ class string_builder final
      * Additional calls to `build()` will result in re-building, even if nothing changed.
      *
      * \todo Include error checks.
+     * \todo Improvement: Return storage.front() if size == 1
+     * \todo Return immediatly if storage.empty() == true
      *
      * \return The concatenation of all stored strings.
      */ 
