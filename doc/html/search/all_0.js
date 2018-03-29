@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['bosswestfalen',['bosswestfalen',['../namespacebosswestfalen.html',1,'']]],
-  ['build',['build',['../classbosswestfalen_1_1string__builder.html#a1080be417923538a429a42276c551186',1,'bosswestfalen::string_builder']]]
+  ['add',['add',['../classbosswestfalen_1_1string__builder.html#addc3aa9292527892a1ab9a57e27acb92',1,'bosswestfalen::string_builder']]]
 ];
