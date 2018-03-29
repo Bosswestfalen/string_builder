@@ -9,7 +9,12 @@
  * \copyright @LICENSE@
  */
 
+#include <algorithm>
+#include <cassert>
+#include <list>
+#include <numeric>
 #include <string>
+
 
 /*!
  * \brief Bosswestfalen's namespace
@@ -48,9 +53,9 @@ class string_builder final
      */
     void add(const std::string& input)
     {
-        storage = input;
+        storage.push_back(input);
     }
-   
+
     /*!
      * \brief Concatenate stored strings.
      *
@@ -60,15 +65,33 @@ class string_builder final
      * \note The result is not stored.
      * Additional calls to `build()` will result in re-building, even if nothing changed.
      *
+     * \todo Include error checks.
+     *
      * \return The concatenation of all stored strings.
      */ 
     std::string build() const
     {
-        return storage;
+        std::string result;
+        using size_type = std::string::size_type;
+        auto op = [](const size_type size, const std::string& element)
+        {
+            return size + element.size();
+        };
+
+        const auto size = std::accumulate(storage.cbegin(), storage.cend(), static_cast<size_type> (0), op);
+        result.reserve(size);
+        std::for_each(storage.cbegin(), storage.cend(), [&result](const auto& element)
+        {
+            result.append(element);
+        });
+        return result;
     }
 
   private:
-    std::string storage{""};
+    /// Internal storage
+    /// \todo Use something else?
+    std::list<std::string> storage{};
+
 };
 
 }
