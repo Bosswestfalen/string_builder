@@ -86,9 +86,12 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbosswestfalen_1_1string__builder.html#ad6b200758f49814ac27337fc5fcf96e9">~string_builder</a> ()=default</td></tr>
 <tr class="memdesc:ad6b200758f49814ac27337fc5fcf96e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nothing special to do on destruction. <br /></td></tr>
 <tr class="separator:ad6b200758f49814ac27337fc5fcf96e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:addc3aa9292527892a1ab9a57e27acb92"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbosswestfalen_1_1string__builder.html#addc3aa9292527892a1ab9a57e27acb92">add</a> (const std::string &amp;input)</td></tr>
-<tr class="memdesc:addc3aa9292527892a1ab9a57e27acb92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add new content to the <code><a class="el" href="classbosswestfalen_1_1string__builder.html" title="The string_builder allows to easily concatenate strings. ">string_builder</a></code>.  <a href="#addc3aa9292527892a1ab9a57e27acb92">More...</a><br /></td></tr>
-<tr class="separator:addc3aa9292527892a1ab9a57e27acb92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50de56cd18aa302fa85b87812e2d063e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbosswestfalen_1_1string__builder.html#a50de56cd18aa302fa85b87812e2d063e">add</a> (std::string const &amp;input)</td></tr>
+<tr class="memdesc:a50de56cd18aa302fa85b87812e2d063e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add new content to the <code><a class="el" href="classbosswestfalen_1_1string__builder.html" title="The string_builder allows to easily concatenate strings. ">string_builder</a></code>.  <a href="#a50de56cd18aa302fa85b87812e2d063e">More...</a><br /></td></tr>
+<tr class="separator:a50de56cd18aa302fa85b87812e2d063e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbc615605a9a49a9292c56b61d0d7063"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbosswestfalen_1_1string__builder.html#acbc615605a9a49a9292c56b61d0d7063">add</a> (std::string &amp;&amp;input)</td></tr>
+<tr class="memdesc:acbc615605a9a49a9292c56b61d0d7063"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add new content to the <code><a class="el" href="classbosswestfalen_1_1string__builder.html" title="The string_builder allows to easily concatenate strings. ">string_builder</a></code>.  <a href="#acbc615605a9a49a9292c56b61d0d7063">More...</a><br /></td></tr>
+<tr class="separator:acbc615605a9a49a9292c56b61d0d7063"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1080be417923538a429a42276c551186"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbosswestfalen_1_1string__builder.html#a1080be417923538a429a42276c551186">build</a> () const</td></tr>
 <tr class="memdesc:a1080be417923538a429a42276c551186"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concatenate stored strings.  <a href="#a1080be417923538a429a42276c551186">More...</a><br /></td></tr>
 <tr class="separator:a1080be417923538a429a42276c551186"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -96,11 +99,10 @@ Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The <code><a class="el" href="classbosswestfalen_1_1string__builder.html" title="The string_builder allows to easily concatenate strings. ">string_builder</a></code> allows to easily concatenate strings. </p>
 <p>Strings are collected and concatenated on demand. Concatenating <em>a</em>, <em>b</em>, and <em>c</em> yields the string <em>abc</em>.</p>
-<dl class="section note"><dt>Note</dt><dd><code><a class="el" href="classbosswestfalen_1_1string__builder.html" title="The string_builder allows to easily concatenate strings. ">string_builder</a></code> is not thread-safe.</dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">Todo:</a></b></dt><dd>Go into detail, when this class evolves. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd><code><a class="el" href="classbosswestfalen_1_1string__builder.html" title="The string_builder allows to easily concatenate strings. ">string_builder</a></code> is not thread-safe. </dd></dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="addc3aa9292527892a1ab9a57e27acb92"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#addc3aa9292527892a1ab9a57e27acb92">&#9670;&nbsp;</a></span>add()</h2>
+<a id="a50de56cd18aa302fa85b87812e2d063e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50de56cd18aa302fa85b87812e2d063e">&#9670;&nbsp;</a></span>add() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -111,7 +113,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void bosswestfalen::string_builder::add </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
           <td class="paramname"><em>input</em></td><td>)</td>
           <td></td>
         </tr>
@@ -125,7 +127,41 @@ Public Member Functions</h2></td></tr>
 
 <p>Add new content to the <code><a class="el" href="classbosswestfalen_1_1string__builder.html" title="The string_builder allows to easily concatenate strings. ">string_builder</a></code>. </p>
 <p><em>input</em> is stored internally and will be used in <code><a class="el" href="classbosswestfalen_1_1string__builder.html#a1080be417923538a429a42276c551186" title="Concatenate stored strings. ">build()</a></code>.</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000002">Todo:</a></b></dt><dd>Other versions? (&amp;&amp;, copy)</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">input</td><td>The string that will be added to the <code><a class="el" href="classbosswestfalen_1_1string__builder.html" title="The string_builder allows to easily concatenate strings. ">string_builder</a></code>'s internal storage. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="acbc615605a9a49a9292c56b61d0d7063"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbc615605a9a49a9292c56b61d0d7063">&#9670;&nbsp;</a></span>add() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bosswestfalen::string_builder::add </td>
+          <td>(</td>
+          <td class="paramtype">std::string &amp;&amp;&#160;</td>
+          <td class="paramname"><em>input</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Add new content to the <code><a class="el" href="classbosswestfalen_1_1string__builder.html" title="The string_builder allows to easily concatenate strings. ">string_builder</a></code>. </p>
+<p><em>input</em> is stored internally and will be used in <code><a class="el" href="classbosswestfalen_1_1string__builder.html#a1080be417923538a429a42276c551186" title="Concatenate stored strings. ">build()</a></code>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">input</td><td>The string that will be added to the <code><a class="el" href="classbosswestfalen_1_1string__builder.html" title="The string_builder allows to easily concatenate strings. ">string_builder</a></code>'s internal storage. </td></tr>
@@ -161,7 +197,10 @@ Public Member Functions</h2></td></tr>
 <p>Concatenate stored strings. </p>
 <p>All strings added so far will be concatenated without any delimiter. Stored strings <em>a</em>, <em>b</em>, and <em>c</em> will result in <em>abc</em>.</p>
 <dl class="section note"><dt>Note</dt><dd>The result is not stored. Additional calls to <code><a class="el" href="classbosswestfalen_1_1string__builder.html#a1080be417923538a429a42276c551186" title="Concatenate stored strings. ">build()</a></code> will result in re-building, even if nothing changed.</dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000003">Todo:</a></b></dt><dd>Include error checks.</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">Todo:</a></b></dt><dd><p class="startdd">Include error checks. </p>
+<p>Improvement: Return storage.front() if size == 1 </p>
+<p class="enddd">Return immediatly if storage.empty() == true</p>
+</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>The concatenation of all stored strings. </dd></dl>
 
 </div>
