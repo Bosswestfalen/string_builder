@@ -14,6 +14,7 @@
 #include <list>
 #include <numeric>
 #include <string>
+#include <utility>
 
 
 /*!
@@ -45,13 +46,19 @@ class string_builder final
      *
      * *input* is stored internally and will be used in `build()`.
      *
-     * \todo Other versions? (&&, copy)
-     *
      * \param input The string that will be added to the `string_builder`'s internal storage.
      */
-    void add(const std::string& input)
+    void add(std::string const& input)
     {
-        storage.push_back(input);
+        storage.push_back(std::move(input));
+    }
+
+    /*!
+     * \copydoc add
+     */
+    void add(std::string&& input)
+    {
+        storage.emplace_back(std::move(input));
     }
 
     /*!
@@ -73,14 +80,14 @@ class string_builder final
     {
         std::string result;
         using size_type = std::string::size_type;
-        auto op = [](const size_type size, const std::string& element)
+        auto op{[](size_type const size, std::string const& element)
         {
             return size + element.size();
-        };
+        }};
 
-        const auto size = std::accumulate(storage.cbegin(), storage.cend(), static_cast<size_type> (0), op);
+        auto const size{std::accumulate(storage.cbegin(), storage.cend(), static_cast<size_type> (0), op)};
         result.reserve(size);
-        std::for_each(storage.cbegin(), storage.cend(), [&result](const auto& element)
+        std::for_each(storage.cbegin(), storage.cend(), [&result](auto const& element)
         {
             result.append(element);
         });
