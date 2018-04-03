@@ -11,13 +11,11 @@
 
 #include <algorithm>
 #include <cassert>
-#include <list>
 #include <numeric>
 #include <string>
 #include <utility>
-#include <vector>
+#include <deque>
 
-#include <iterator>
 
 /*!
  * \brief Bosswestfalen's namespace
@@ -98,8 +96,7 @@ class string_builder final
 
   private:
     /// Internal storage
-    /// \todo Use something else?
-    std::vector<std::string> storage{};
+    std::deque<std::string> storage{};
 
 };
 
