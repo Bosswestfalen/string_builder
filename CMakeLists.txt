@@ -1,4 +1,5 @@
-#ToDo: Handle CMAKE_BUILD_TYPE=Release (e.g. testing? no coverage)
+#ToDo: Handle CMAKE_BUILD_TYPE=Release (e.g. testing?)
+#ToDo: what about install targets?
 
 #--------------------
 # Global Set-Up
