@@ -1,5 +1,5 @@
 # ToDo: Make test depent on build?
-# ToDo: including binary dir is ugly, at least <bosswestfalen/string_builder.hpp"
+# ToDo: including binary dir is ugly, at least <bosswestfalen/string_builder.hpp>
 
 #--------------------
 # Global set-up
