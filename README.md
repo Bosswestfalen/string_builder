@@ -10,7 +10,7 @@ The building is straight forward:
 + execute `cmake`, e.g. `cmake -H. -B<build>`
 + build from <build>: `cmake --build .`
 
-**Note**: See (Testing) on how to disable tests.
+**Note**: See [Testing](#testing) on how to disable tests.
 
 # Testing
 Tests are automaticall built.
