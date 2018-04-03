@@ -48,17 +48,15 @@ class string_builder final
      *
      * \param input The string that will be added to the `string_builder`'s internal storage.
      */
-    void add(std::string const& input)
-    {
-        storage.push_back(input);
-    }
-
-    /*!
-     * \copydoc add
-     */
     void add(std::string&& input)
     {
         storage.emplace_back(std::move(input));
+    }
+
+    /// \copydoc add
+    void add(std::string const& input)
+    {
+        storage.push_back(input);
     }
 
     /*!
