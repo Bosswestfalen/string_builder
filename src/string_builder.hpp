@@ -15,7 +15,9 @@
 #include <numeric>
 #include <string>
 #include <utility>
+#include <vector>
 
+#include <iterator>
 
 /*!
  * \brief Bosswestfalen's namespace
@@ -50,7 +52,7 @@ class string_builder final
      */
     void add(std::string const& input)
     {
-        storage.push_back(std::move(input));
+        storage.push_back(input);
     }
 
     /*!
@@ -97,7 +99,7 @@ class string_builder final
   private:
     /// Internal storage
     /// \todo Use something else?
-    std::list<std::string> storage{};
+    std::vector<std::string> storage{};
 
 };
 
