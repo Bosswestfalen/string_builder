@@ -14,7 +14,7 @@ set(CXX_EXTENSIONS OFF)
 
 set(TARGET_NAME "string_builder")
 
-file(READ "${CMAKE_SOURCE_DIR}/LICENSE.md" LICENSE)
+file(READ "${CMAKE_SOURCE_DIR}/LICENSE.MIT" LICENSE)
 configure_file("${CMAKE_SOURCE_DIR}/src/${TARGET_NAME}.hpp" "${CMAKE_BINARY_DIR}/${TARGET_NAME}.hpp")
 add_library(${TARGET_NAME} INTERFACE)
 
