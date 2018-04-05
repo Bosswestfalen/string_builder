@@ -30,10 +30,10 @@
 
 #include <algorithm>
 #include <cassert>
+#include <deque>
 #include <numeric>
 #include <string>
 #include <utility>
-#include <deque>
 
 
 /*!
@@ -50,9 +50,6 @@ namespace bosswestfalen
  * Concatenating *a*, *b*, and *c* yields the string *abc*.
  *
  * \note `string_builder` is not thread-safe.
- *
- * \tparam Container The container that stores the added strings.
- * Default is `std::deque`
  */
 class string_builder final
 {
