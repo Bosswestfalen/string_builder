@@ -4,7 +4,7 @@
 #--------------------
 # Global set-up
 #--------------------
-include_directories(${CMAKE_BINARY_DIR})
+include_directories(${CMAKE_SOURCE_DIR}/src)
 
 #--------------------
 # Unit Tests
