@@ -13,6 +13,7 @@ set(CXX_STANDARD_REQUIRED ON)
 set(CXX_EXTENSIONS OFF)
 
 set(TARGET_NAME "string_builder")
+set(SOURCE_FILE_NAME "${TARGET_NAME}.hpp")
 
 add_library(${TARGET_NAME} INTERFACE)
 
@@ -24,7 +25,7 @@ if(DOXYGEN_FOUND)
     set(DOXYGEN_FULL_PATH_NAMES "YES")
     set(DOXYGEN_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/doc")
     set(DOXYGEN_STRIP_FROM_PATH "${CMAKE_SOURCE_DIR}/src")
-    doxygen_add_docs(doc "${CMAKE_SOURCE_DIR}/src/${TARGET_NAME}.hpp")
+    doxygen_add_docs(doc "${CMAKE_SOURCE_DIR}/src/${SOURCE_FILE_NAME}")
     # Custom script to wipe the content of the doc folder (see cmake/wipe_doc.cmake for more details)
     add_custom_target(wipe_docs COMMAND ${CMAKE_COMMAND} -P "${CMAKE_SOURCE_DIR}/cmake/wipe_doc.cmake")
     # wipe doc/html before generating documentation
