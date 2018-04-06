@@ -13,11 +13,22 @@ The building is straight forward:
 **Note**: See [Testing](#testing) on how to disable tests.
 
 # Testing
-Tests are automaticall built.
+Tests are automatically built.
 
 To disable this `cmake` must be called with `-DBUILD_TEST=OFF`.
 
 For unit testing [Catch2](https://github.com/catchorg/Catch2) is used.
+
+
+If tests are built, code coverage is available.
+It is enabled by default.
+Use `-DSB_TEST_COVERAGE=OFF" to disable.
+
+To generate the coverage report run target `lcov_html`.
+The report is written to `<build>/test/html`.
+
+**Note**: Code coverage is only available if building with GCC.
+Also it is assumed that `gcov`, `lcov`, and `genhtml` are available.
 
 # Documentation
 Documentation is generated with [Doxygen](https://www.stack.nl/~dimitri/doxygen/index.html).
