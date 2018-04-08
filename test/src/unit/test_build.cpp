@@ -29,13 +29,31 @@ SCENARIO("building strings")
         WHEN("two strings are added")
         {
             const std::string cat{"cat"};
-            sb.add(cat);
             const std::string dog{"dog"};
+            sb.add(cat);
             sb.add(dog);
 
             THEN("the result is the concatenation of both strings")
             {
                 REQUIRE(cat + dog == sb.build());
+            }
+        }
+    }
+
+    GIVEN("two empty string_builder")
+    {
+        bosswestfalen::string_builder a;
+        bosswestfalen::string_builder b;
+
+        WHEN("Rvalue and Lvalues are added")
+        {
+            a.add("cat");
+            const std::string cat{"cat"};
+            b.add(cat);
+
+            THEN("both builders produce the same result")
+            {
+                REQUIRE(a.build() == b.build());
             }
         }
     }
