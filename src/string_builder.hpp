@@ -65,17 +65,22 @@ class string_builder final
      *
      * *input* is stored internally and will be used in `build()`.
      *
+     * \todo Catch exceptions
+     * \todo Check for overflow of `size`
+     *
      * \param input The string that will be added to the `string_builder`'s internal storage.
      */
     void add(std::string&& input)
     {
         storage.emplace_back(std::move(input));
+        result_size += storage.back().size();
     }
 
     /// \copydoc add
     void add(std::string const& input)
     {
         storage.push_back(input);
+        result_size += storage.back().size();
     }
 
     /*!
@@ -103,25 +108,26 @@ class string_builder final
             return storage.front();
         }
 
-        using size_type = std::string::size_type;
-        auto op{[](size_type const size, std::string const& element)
-        {
-            return size + element.size();
-        }};
+        return concatenate();
+    }
 
-        auto const size{std::accumulate(storage.cbegin(), storage.cend(), static_cast<size_type> (0), op)};
+  private:
+    /// Size of the resulting string
+    std::string::size_type result_size{0};
+    /// Internal storage
+    std::deque<std::string> storage{};
+
+    /// Concatenate stored strings.
+    std::string concatenate() const
+    { 
         std::string result;
-        result.reserve(size);
+        result.reserve(result_size);
         std::for_each(storage.cbegin(), storage.cend(), [&result](auto const& element)
         {
             result.append(element);
         });
         return result;
     }
-
-  private:
-    /// Internal storage
-    std::deque<std::string> storage{};
 };
 
 }
