@@ -88,13 +88,21 @@ class string_builder final
      * Additional calls to `build()` will result in re-building, even if nothing changed.
      *
      * \todo Include error checks.
-     * \todo Improvement: Return storage.front() if size == 1
-     * \todo Return immediatly if storage.empty() == true
      *
      * \return The concatenation of all stored strings.
      */ 
     std::string build() const
     {
+        if (storage.empty())
+        {
+            return std::string{};
+        }
+
+        if (storage.size() == 1)
+        {
+            return storage.front();
+        }
+
         using size_type = std::string::size_type;
         auto op{[](size_type const size, std::string const& element)
         {
