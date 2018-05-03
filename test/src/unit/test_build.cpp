@@ -11,7 +11,7 @@ SCENARIO("building strings")
         {
             THEN("it is an empty string")
             {
-                REQUIRE(std::string{""} == sb.build());
+                CHECK(std::string{""} == sb.build());
             }
         }
 
@@ -22,7 +22,7 @@ SCENARIO("building strings")
             
             THEN("the result is the entered string")
             {
-                REQUIRE(cat == sb.build());
+                CHECK(cat == sb.build());
             }
         }
 
@@ -35,7 +35,7 @@ SCENARIO("building strings")
 
             THEN("the result is the concatenation of both strings")
             {
-                REQUIRE(cat + dog == sb.build());
+                CHECK(cat + dog == sb.build());
             }
         }
     }
@@ -53,7 +53,7 @@ SCENARIO("building strings")
 
             THEN("both builders produce the same result")
             {
-                REQUIRE(a.build() == b.build());
+                CHECK(a.build() == b.build());
             }
         }
     }
