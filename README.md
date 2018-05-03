@@ -1,5 +1,5 @@
 # bosswestfalen::string_builder
-[bosswestfalen::string_builder](https://www.github.com/bosswestfalen/string_builder) offers an easy to use class to store `std::string`s and concatenate them on demand.
+[bosswestfalen::string_builder](https://www.github.com/bosswestfalen/string_builder) offers an easy to use class to convert (almost) any type to `std::string` and concatenate them on demand.
 
 # Building
 To build the project [CMake](https://www.cmake.org) 3.9 or later is needed.
@@ -13,15 +13,14 @@ The building is straight forward:
 **Note**: See [Testing](#testing) on how to disable tests.
 
 # Testing
-Tests are automatically built.
+Tests will be build by default.
 
 To disable this `cmake` must be called with `-DBUILD_TEST=OFF`.
 
 For unit testing [Catch2](https://github.com/catchorg/Catch2) is used.
 
 
-If tests are built, code coverage is available.
-It is enabled by default.
+Code coverage is available by default.
 Use `-DSB_TEST_COVERAGE=OFF" to disable.
 
 To generate the coverage report run target `lcov_html`.
