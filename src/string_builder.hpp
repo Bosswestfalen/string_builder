@@ -334,6 +334,7 @@ class basic_string_builder final
     }
 };
 
+/// Alias to use `string_builder` with `std::deque`.
 using string_builder = basic_string_builder<std::deque>;
 
 }
