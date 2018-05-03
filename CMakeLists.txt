@@ -1,5 +1,6 @@
 #ToDo: Handle CMAKE_BUILD_TYPE=Release (e.g. testing?)
 #ToDo: what about install targets?
+#ToDo: search for plantuml
 
 #--------------------
 # Global Set-Up
@@ -29,6 +30,9 @@ if(DOXYGEN_FOUND)
     set(DOXYGEN_FULL_PATH_NAMES "YES")
     set(DOXYGEN_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/doc")
     set(DOXYGEN_STRIP_FROM_PATH "${CMAKE_SOURCE_DIR}/src")
+    set(DOXYGEN_PLANTUML_JAR_PATH "/usr/share/plantuml/plantuml.jar")
+    set(DOXYGEN_ENABLE_PREPROCESSING "YES")
+    set(DOXYGEN_PREDEFINED "BOSSWESTFALEN_ONLY_FOR_DOXYGEN")
     doxygen_add_docs(doc "${CMAKE_SOURCE_DIR}/src/${SOURCE_FILE_NAME}")
     # Custom script to wipe the content of the doc folder (see cmake/wipe_doc.cmake for more details)
     add_custom_target(wipe_docs COMMAND ${CMAKE_COMMAND} -P "${CMAKE_SOURCE_DIR}/cmake/wipe_doc.cmake")
